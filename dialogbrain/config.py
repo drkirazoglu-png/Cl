@@ -1,6 +1,11 @@
 import os
 from dataclasses import dataclass
 
+from dotenv import load_dotenv
+
+# Proje klasöründeki .env dosyasını otomatik yükle (Windows dahil her sistemde çalışır).
+load_dotenv()
+
 
 def _require(name: str) -> str:
     value = os.environ.get(name)

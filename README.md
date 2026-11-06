@@ -14,8 +14,7 @@ Claude API ile çalışan, konuşma geçmişini hatırlayan bir WhatsApp sohbet 
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env   # değerleri doldurun
-set -a && source .env && set +a
+cp .env.example .env   # değerleri doldurun (bot .env dosyasını kendisi okur)
 uvicorn dialogbrain.app:app --host 0.0.0.0 --port 8000
 ```
 
